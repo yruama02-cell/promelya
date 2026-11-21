@@ -1,6 +1,6 @@
 // Import automatique des offres Promelya (gratuit, via GitHub Actions)
 const { SUPABASE_URL, SERVICE_KEY, FEED_URL } = process.env;
-const H = { apikey: SERVICE_KEY, Authorization: `Bearer ${SERVICE_KEY}`, 'Content-Type': 'application/json' };
+const H = SERVICE_KEY.startsWith('sb_') ? { apikey: SERVICE_KEY, 'Content-Type': 'application/json' } : { apikey: SERVICE_KEY, Authorization: `Bearer ${SERVICE_KEY}`, 'Content-Type': 'application/json' };
 const API = `${SUPABASE_URL}/rest/v1/deals`;
 
 // 1. Garde Supabase actif (évite la mise en pause du plan gratuit)
