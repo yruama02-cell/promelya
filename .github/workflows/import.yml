@@ -1,0 +1,17 @@
+name: Import des offres Promelya
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: node import.mjs
+        env:
+          SUPABASE_URL: https://mdfchicjgkcpdlikkbby.supabase.co
+          SERVICE_KEY: ${{ secrets.SERVICE_KEY }}
+          FEED_URL: ${{ secrets.FEED_URL }}
