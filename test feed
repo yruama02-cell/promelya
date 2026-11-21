@@ -1,0 +1,4 @@
+[
+ {"id":"t1","title":"TEST - Casque audio sans fil","merchant":"TestShop","category":"High-tech","price":49.9,"old_price":89.9,"url":"https://example.com","expires":"2030-01-01T00:00:00Z"},
+ {"id":"t2","title":"TEST - Tapis de yoga","merchant":"TestShop","category":"Sport","price":14.9,"old_price":29.9,"code":"TEST10","url":"https://example.com","expires":"2030-01-01T00:00:00Z"}
+]
